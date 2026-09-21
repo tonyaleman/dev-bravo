@@ -14,7 +14,7 @@
 
 ## About GameLog
 
--GameLog is an app that will keep track of multiple games, as well as what platform they were played on. It is meant to be used by a person to keep track of their games. The application is still in its early stages, but by the time it is finished it should allow someone to enter as many games as they want. Hopefully it will also allow users to search for specific games and filter them out. 
+GameLog is an app that will keep track of multiple games, as well as what platform they were played on. It is meant to be used by a person to keep track of their games. The application is still in its early stages, but by the time it is finished it should allow someone to enter as many games as they want. Hopefully it will also allow users to search for specific games and filter them out. 
 
 ## Test
 -🧪 Test: Can the user input a game. 
@@ -22,3 +22,7 @@
 -✅ Pass: The user is able to input a game.
 
 -❌ Fail: The user is not able to input a game. 
+
+## Technology Stack
+
+HTML5|CSS3|JavaScript|jQuery|Bootstrap 5|Bootsrap Icons|Normalize.css|Google Fonts|Git|GitHub|Github Pages
