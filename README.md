@@ -44,3 +44,13 @@ dev-bravo/
 └── images/
     └── rdr2.png
 ```
+
+## Validation + Accessibility
+
+Manually checked through all the pages to make sure everything was good. Reviewed the links and made sure they went to the correct places. 
+
+Other screen layouts, text readability, and other HTML/CSS validation errors, like passwords, are all things I still need to check for. 
+
+## Attribution
+
+Asked ChatGPT to explain bootstrap functions, as well as asking it to perform a debugging on some of my code. | Viewed Bootstrap thoroughly and searched for different functions to use. | Classmates | Used codecademy examples as references. 
