@@ -4,7 +4,7 @@
 
 ## Author Information
 
-- Author: Antonio Aleman|Project: Dev-Bravo|Version: 0.1|Date: 9/21/26
+Author: Antonio Aleman|Project: Dev-Bravo|Version: 0.1|Date: 9/21/26
 
 ## User Story
 
@@ -29,6 +29,7 @@ VS Code | HTML5 | CSS3 | JavaScript | jQuery | Bootstrap 5 | Bootstrap Icons | N
 
 ## Project Structure
 
+```text
 dev-bravo/
 ├── index.html
 ├── README.md
@@ -42,3 +43,4 @@ dev-bravo/
 │   └── app.js
 └── images/
     └── rdr2.png
+```
