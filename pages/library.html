@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+  </head>
+  <body>
+  <!-- Navigation --> 
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> 
+    <div class="container"> 
+        <span class="navbar-brand fs-2 fw-bold">GameLog</span> 
+        <div class="input-group w-25"> 
+            <input type="text" class="form-control me-2" id="search-box" placeholder="Search games">
+             <button class="btn btn-primary" type="button" id="search-btn">Go</button> 
+            </div> 
+            <div class="dropdown"> 
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="filter" data-bs-toggle="dropdown" aria-expanded="false">Games</button>
+                 <ul class="dropdown-menu" aria-labelledby="filter"> 
+                    <li><a class="dropdown-item" href="#">All Games</a></li> 
+                    <li><a class="dropdown-item" href="#">Completed Games</a></li> 
+                    <li><a class="dropdown-item" href="#">Games Not Played</a></li> 
+                    <li><a class="dropdown-item" href="#">Currently Playing </a></li>
+                 </ul>
+                 </div> 
+                </div> 
+                  <div class="px-3">
+        <a href="../index.html" class="btn btn-primary">Sign Out</a>
+    </div>
+            </nav>
+      
+
+    
+
+    <!-- Library Content -->
+    <main class="container py-5">
+      <h1 class="mb-4">My Library</h1>
+
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card">
+            <img src="../images/rdr2.png" class="card-img-top" alt="Red Dead Redemption 2 cover"/>
+            <div class="card-body">
+              <h5 class="card-title">Red Dead Redemption 2</h5>
+              <p class="card-text">Platform: Xbox Series X</p>
+              <p class="card-text">Status: Currently Playing</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../scripts/app.js"></script>
+  </body>
+</html>
