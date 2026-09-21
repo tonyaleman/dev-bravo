@@ -26,7 +26,7 @@ To get to library simply press continue on either sign up or login page.
 
 ## Technology Stack
 
-VS Code | HTML5 | CSS3 | JavaScript | jQuery | Bootstrap 5 | Bootstrap Icons | Normalize.css | Google Fonts | Git | GitHub | GitHub Pages
+VS Code | HTML5 | CSS3 | JavaScript | Bootstrap 5 | Normalize.css | Google Fonts | Git | GitHub | GitHub Pages
 
 ## Project Structure
 
