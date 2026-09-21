@@ -54,7 +54,7 @@ Other screen layouts, text readability, and other HTML/CSS validation errors, li
 
 ## Attribution
 
--Asked ChatGPT to explain bootstrap functions, as well as asking it to perform a debugging on some of my code. 
--Viewed Bootstrap thoroughly and searched for different functions to use. 
--Asked a classmate for advice. 
--Used codecademy examples as references. 
+- Asked ChatGPT to explain bootstrap functions, as well as asking it to perform a debugging on some of my code. 
+- Viewed Bootstrap thoroughly and searched for different functions to use. 
+- Asked a classmate for advice. 
+- Used codecademy examples as references. 
