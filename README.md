@@ -25,4 +25,4 @@ GameLog is an app that will keep track of multiple games, as well as what platfo
 
 ## Technology Stack
 
-HTML5 | CSS3 | JavaScript | jQuery | Bootstrap 5 | Bootstrap Icons | Normalize.css | Google Fonts | Git | GitHub | GitHub Pages
+VS Code | HTML5 | CSS3 | JavaScript | jQuery | Bootstrap 5 | Bootstrap Icons | Normalize.css | Google Fonts | Git | GitHub | GitHub Pages
