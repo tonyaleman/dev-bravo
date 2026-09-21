@@ -26,3 +26,19 @@ GameLog is an app that will keep track of multiple games, as well as what platfo
 ## Technology Stack
 
 VS Code | HTML5 | CSS3 | JavaScript | jQuery | Bootstrap 5 | Bootstrap Icons | Normalize.css | Google Fonts | Git | GitHub | GitHub Pages
+
+## Project Structure
+
+dev-bravo/
+├── index.html
+├── README.md
+├── pages/
+│   ├── login.html
+│   ├── signup.html
+│   └── library.html
+├── styles/
+│   └── style.css
+├── scripts/
+│   └── app.js
+└── images/
+    └── rdr2.png
