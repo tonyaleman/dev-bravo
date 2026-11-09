@@ -1,57 +1,250 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Library</title>
-    <link rel="stylesheet" href="../styles/style.css" />
-  </head>
-  <body>
-  <!-- Navigation --> 
-   <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> 
-    <div class="container"> 
-        <span class="navbar-brand fs-2 fw-bold">GameLog</span> 
-        <div class="input-group w-25"> 
-            <input type="text" class="form-control me-2" id="search-box" placeholder="Search games">
-             <button class="btn btn-primary" type="button" id="search-btn">Go</button> 
-            </div> 
-            <div class="dropdown"> 
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="filter" data-bs-toggle="dropdown" aria-expanded="false">Games</button>
-                 <ul class="dropdown-menu" aria-labelledby="filter"> 
-                    <li><a class="dropdown-item" href="#">All Games</a></li> 
-                    <li><a class="dropdown-item" href="#">Completed Games</a></li> 
-                    <li><a class="dropdown-item" href="#">Games Not Played</a></li> 
-                    <li><a class="dropdown-item" href="#">Currently Playing </a></li>
-                 </ul>
-                 </div> 
-                </div> 
-                  <div class="px-3">
-        <a href="../index.html" class="btn btn-primary">Sign Out</a>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library | GameLog</title>
+  <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container d-flex flex-wrap gap-3 align-items-center">
+      <a class="navbar-brand fs-2 fw-bold" href="../index.html">
+        GameLog <i class="bi bi-controller fs-1"></i>
+      </a>
+
+      <!-- Search -->
+      <div class="input-group" style="max-width: 280px;">
+        <input
+          type="search"
+          class="form-control"
+          id="search-box"
+          placeholder="Search games"
+          aria-label="Search games"
+        >
+        <button
+          class="btn btn-primary"
+          type="button"
+          id="search-btn"
+        >
+          Go
+        </button>
+      </div>
+
+      <!-- Filters -->
+      <div class="dropdown">
+        <button
+          class="btn btn-secondary dropdown-toggle"
+          type="button"
+          id="filter"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Games
+        </button>
+
+        <ul class="dropdown-menu" aria-labelledby="filter">
+          <li>
+            <button class="dropdown-item game-filter" data-status="All">
+              All Games
+            </button>
+          </li>
+          <li>
+            <button class="dropdown-item game-filter" data-status="Completed">
+              Completed Games
+            </button>
+          </li>
+          <li>
+            <button class="dropdown-item game-filter" data-status="Not Played">
+              Games Not Played
+            </button>
+          </li>
+          <li>
+            <button class="dropdown-item game-filter" data-status="Currently Playing">
+              Currently Playing
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Current User -->
+      <span class="text-white" id="current-user"></span>
+
+      <!-- Admin Link -->
+      <a
+        href="admin.html"
+        id="admin-link"
+        class="btn btn-outline-light d-none"
+      >
+        Admin Dashboard
+      </a>
+
+      <!-- Sign Out -->
+      <button
+        type="button"
+        class="btn btn-primary"
+        id="sign-out-btn"
+      >
+        Sign Out
+      </button>
     </div>
-            </nav>
-      
+  </nav>
 
-    
+  <!-- Library -->
+  <main class="container py-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h1>My Library</h1>
 
-    <!-- Library Content -->
-    <main class="container py-5">
-      <h1 class="mb-4">My Library</h1>
+      <button
+        class="btn btn-primary"
+        type="button"
+        id="add-game-btn"
+        data-bs-toggle="modal"
+        data-bs-target="#gameModal"
+      >
+        Add Game
+      </button>
+    </div>
 
-      <div class="row">
-        <div class="col-md-3">
-          <div class="card">
-            <img src="../images/rdr2.png" class="card-img-top" alt="Red Dead Redemption 2 cover"/>
-            <div class="card-body">
-              <h5 class="card-title">Red Dead Redemption 2</h5>
-              <p class="card-text">Platform: Xbox Series X</p>
-              <p class="card-text">Status: Currently Playing</p>
+    <div
+      id="library-message"
+      class="mb-3"
+      role="status"
+      aria-live="polite"
+    ></div>
+
+    <div class="row g-4" id="game-library"></div>
+  </main>
+
+  <!-- Add/Edit Game Modal -->
+  <div
+    class="modal fade"
+    id="gameModal"
+    tabindex="-1"
+    aria-labelledby="modal-title"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h5 class="modal-title" id="modal-title">
+            Add Game
+          </h5>
+
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+
+        <div class="modal-body">
+          <form id="game-form">
+
+            <!-- Game Title -->
+            <div class="mb-3">
+              <label for="game-title" class="form-label">
+                Game Title
+              </label>
+              <input
+                type="text"
+                class="form-control"
+                id="game-title"
+                required
+              >
             </div>
-          </div>
+
+            <!-- Platform -->
+            <div class="mb-3">
+              <label for="game-platform" class="form-label">
+                Platform
+              </label>
+              <input
+                type="text"
+                class="form-control"
+                id="game-platform"
+                required
+              >
+            </div>
+
+            <!-- Status -->
+            <div class="mb-3">
+              <label for="game-status" class="form-label">
+                Status
+              </label>
+              <select class="form-select" id="game-status">
+                <option value="Not Played">Not Played</option>
+                <option value="Currently Playing">Currently Playing</option>
+                <option value="Completed">Completed</option>
+              </select>
+            </div>
+
+            <!-- Image Upload -->
+            <div class="mb-3">
+              <label for="game-image" class="form-label">
+                Cover Image (Optional)
+              </label>
+
+              <input
+                type="file"
+                class="form-control"
+                id="game-image"
+                accept="image/*"
+              >
+
+              <div class="form-text">
+                Select a file from your computer.
+                Images are resized for browser storage.
+              </div>
+            </div>
+
+            <!-- Image Preview -->
+            <img
+              id="image-preview"
+              class="img-fluid rounded d-none mb-3"
+              alt="Game cover preview"
+              style="max-height: 180px;"
+            >
+
+            <!-- Remove Image -->
+            <div class="form-check mb-3">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="remove-image"
+              >
+
+              <label class="form-check-label" for="remove-image">
+                Remove existing cover
+              </label>
+            </div>
+
+            <!-- Form Messages -->
+            <div
+              id="form-message"
+              class="text-danger mb-3"
+              role="alert"
+            ></div>
+
+            <!-- Save -->
+            <button
+              type="submit"
+              class="btn btn-primary"
+              id="save-game-btn"
+            >
+              Save Game
+            </button>
+
+          </form>
         </div>
       </div>
-    </main>
+    </div>
+  </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../scripts/app.js"></script>
-  </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../scripts/app.js"></script>
+</body>
 </html>
